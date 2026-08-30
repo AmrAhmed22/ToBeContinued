@@ -164,12 +164,12 @@ int removeDuplicates(vector<int>& nums) {
     // insertIndex tracks where the next unique element should go
     int insertIndex = 1;
 
-    // i scans the array starting from index 1
     for (int i = 1; i < nums.size(); ++i) {
-        // If we find a new unique element
+        //  new unique element
         if (nums[i] != nums[i - 1]) {
-            // Put it in the correct position
+            // Put it in the Last next after uniquE position
             nums[insertIndex] = nums[i];
+
             // Move the insertIndex forward
             insertIndex++;
         }
@@ -177,6 +177,28 @@ int removeDuplicates(vector<int>& nums) {
 
     return insertIndex;
 }
+
+
+int removeElement(vector<int>& nums, int val) {
+
+  
+    int back = 0;
+
+    for (int i = 0; i < nums.size(); i++) {
+
+        if (nums[i] != val) {
+
+            nums[back] = nums[i];
+
+            back++;
+        }
+
+
+    }
+
+    return back;
+}
+
 
 int main()
 {
