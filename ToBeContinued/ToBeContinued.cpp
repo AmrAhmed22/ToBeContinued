@@ -200,6 +200,42 @@ int removeElement(vector<int>& nums, int val) {
 }
 
 
+
+
+int strStr(string haystack, string needle) {
+    
+ 
+    bool equal = true;
+
+    for (int i = 0; i < haystack.length(); i++) {
+
+        if (haystack[i] == needle[0]) {
+            int iter = i + 1;
+            for (int j = 1; j < needle.length(); j++) {
+
+                if (haystack[iter] != needle[j]) {
+                    equal = false;
+                    break;
+                }
+                iter++;
+            }
+
+            if (equal == true)
+                return i; 
+            
+        }
+        equal = true;
+    }
+
+    return -1;
+
+}
+
+
+
+
+
+
 int main()
 {
   
@@ -208,3 +244,4 @@ int main()
 
     return 0;
 }
+
