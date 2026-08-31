@@ -178,7 +178,7 @@ int removeDuplicates(vector<int>& nums) {
     return insertIndex;
 }
 
-
+// Same like the prev, two pointers one slow and one fast.
 int removeElement(vector<int>& nums, int val) {
 
   
@@ -235,7 +235,6 @@ int strStr(string haystack, string needle) {
 
 
 
-
 int main()
 {
   
@@ -244,4 +243,3 @@ int main()
 
     return 0;
 }
-
