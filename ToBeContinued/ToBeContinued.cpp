@@ -203,7 +203,7 @@ int removeElement(vector<int>& nums, int val) {
 
 
 int strStr(string haystack, string needle) {
-    
+    /*
  
     bool equal = true;
 
@@ -227,6 +227,19 @@ int strStr(string haystack, string needle) {
         equal = true;
     }
 
+    return -1;*/
+
+
+    // Better answer (LOWER complexity)
+
+    if (needle.length() > haystack.length())
+        return -1;
+
+    for (int i = 0; i <= haystack.length() - needle.length(); ++i) {
+        if (haystack.substr(i, needle.length()) == needle) {
+            return i;
+        }
+    }
     return -1;
 
 }
